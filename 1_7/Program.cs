@@ -74,3 +74,79 @@
 //          Console.ReadKey();
 //      }
 //  }
+
+//Продемонстрировать двумерный массив
+
+// class TwoD
+// {
+//     static void Main()
+//     {
+//         int t, i;
+//         int[,] table = new int[3, 4];
+// 
+//         for(t=0;t<3;t++)
+//         {
+//             for(i=0;i<4;i++)
+//             {
+//                 table[t, i] = (t * 4) + i + 1;
+//                 Console.Write(table[t, i] + " ");
+//             }
+//             Console.WriteLine();
+//         }
+//         Console.ReadKey();
+//     }
+// }
+// Суммировать значения по одной из диагоналей матрицы 3x3x3
+
+//  class ThreeDMatrix
+//  {
+//      static void Main()
+//      {
+//          int[,,] m = new int[3, 3, 3];
+//          int sum = 0;
+//          int n = 1;
+//  
+//          for (int x = 0; x < 3; x++)
+//              for (int y = 0; y < 3; y++)
+//                  for (int z = 0; z < 3; z++)
+//                      m[x, y, z] = n++;
+//          sum = m[0, 0, 0] + m[1, 1, 1] + m[2, 2, 2];
+//          Console.WriteLine("Сумма значений по первой диагонали: " + sum);
+//          Console.ReadKey();
+//      }
+//  }
+// Продемонстрировать применение ступенчатых массивов
+
+// class jagged
+// {
+//     static void Main()
+//     {
+//         int[][] jagged = new int[3][];
+//         jagged[0] = new int[4];
+//         jagged[1] = new int[3];
+//         jagged[2] = new int[5];
+// 
+//         int i;
+// 
+//         //Сохранить значения в первом массиве
+//         for (i = 0; i < 4; i++)
+//             jagged[0][i] = i;
+//         //Сохранить значения во втором массиве
+//         for (i = 0; i < 3; i++)
+//             jagged[1][i] = i;
+//         //Сохранить значения в третьем массиве
+//         for (i = 0; i < 5; i++)
+//             jagged[2][i] = i;
+//         //вывести значения из первого массив
+//         for (i = 0; i < 4; i++)
+//             Console.Write(jagged[0][i]+" ");
+//         Console.WriteLine();
+//         for (i = 0; i < 3; i++)
+//             Console.Write(jagged[1][i] + " ");
+//         Console.WriteLine();
+//         for (i = 0; i < 5; i++)
+//             Console.Write(jagged[2][i] + " ");
+//         Console.WriteLine();
+//         Console.ReadKey();
+//     }
+// }

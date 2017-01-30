@@ -150,3 +150,137 @@
 //         Console.ReadKey();
 //     }
 // }
+
+// Присваивание ссылок на массивы.
+
+// class AssignARef
+// {
+//     static void Main()
+//     {
+//         int i;
+// 
+//         int[] nums1 = new int[10];
+//         int[] nums2 = new int[10];
+// 
+//         for (i = 0; i < 10; i++) nums1[i] = i;
+// 
+//         for (i = 0; i < 10; i++) nums2[i] = -i;
+//         Console.WriteLine("Содержимое массива nums1: ");
+//         for (i = 0; i < 10; i++)
+//             Console.Write(nums1[i] + " ");
+//         Console.WriteLine();
+// 
+//         Console.WriteLine("Содержимое массива nums2: ");
+//         for (i = 0; i < 10; i++)
+//             Console.Write(nums2[i] + " ");
+//         Console.WriteLine();
+// 
+//         nums2 = nums1; //теперь nums2 ссылается на nums1
+// 
+//         Console.Write("Содержимое массива nums2\n" + "после присваивания: ");
+//         for (i = 0; i < 10; i++)
+//             Console.Write(nums2[i] + " ");
+//         Console.WriteLine();
+// 
+//         //далее оперировать массивом nums1 посредством переменной ссылки на массив nums2
+//         nums2[3] = 99;
+// 
+//         Console.Write("Содержимое массива nums1 после изменения \n" + "посредством переменной nums2: ");
+//         for (i = 0; i < 10; i++)
+//             Console.Write(nums1[i] + " ");
+//         Console.WriteLine();
+//         Console.ReadKey();
+// 
+//     }
+// }
+
+// class LengthDemo
+// {
+//     static void Main()
+//     {
+//         int[] nums = new int[10];
+// 
+//         Console.WriteLine("Длина массива nums равна " + nums.Length);
+// 
+//         //Использовать свойство Length для инициализации массива nums.
+//         for (int i = 0; i < nums.Length; i++)
+//             nums[i] = i * i;
+//         //А теперь воспользоваться свойством Length для вывода содержимого массива nums
+//         Console.Write("Содержимое массива nums: ");
+//         for (int i = 0; i < nums.Length; i++)
+//             Console.Write(nums[i] + " ");
+//         Console.WriteLine();
+//         Console.ReadKey();
+//     }
+// }
+
+// class LengthDemo3D
+// {
+//     static void Main()
+//     {
+//         int[,,] nums = new int[10, 5, 6];
+//         Console.WriteLine("Длина массива nums равна " + nums.Length);
+//         Console.ReadKey();
+//     }
+// }
+
+// Поменять местами содержимое элементов массива.
+// class RevCopy
+// {
+//     static void Main()
+//     {
+//         int i, j;
+//         int[] nums1 = new int[10];
+//         int[] nums2 = new int[10];
+// 
+//         for (i = 0; i < nums1.Length; i++) nums1[i] = i;
+// 
+//         Console.Write("Исходное содержимое массива: ");
+//         for (i = 0; i < nums2.Length; i++)
+//             Console.Write(nums1[i] + " ");
+// 
+//         Console.WriteLine();
+// 
+//         //Скопировать элементы массива nums1 в nums2 в обратном порядке
+//         if (nums2.Length >= nums1.Length) //проверить, достаточно ли длины массива nums2
+//             for (i = 0, j = nums1.Length - 1; i < nums1.Length; i++, j--)
+//                 nums2[j] = nums1[i];
+//         Console.Write("Содержимое массива в обратном порядке: ");
+//         for (i = 0; i < nums2.Length; i++)
+//             Console.Write(nums2[i] + " ");
+//         Console.WriteLine();
+//         Console.ReadKey();
+//     }
+// 
+// }
+// class jagged //Продемонстрировать применение свойства Length при обращении со ступенчатыми массивами
+// {
+//     static void Main()
+//     {
+//         int[][] network_nodes = new int[4][];
+//         network_nodes[0] = new int[3];
+//         network_nodes[1] = new int[7];
+//         network_nodes[2] = new int[2];
+//         network_nodes[3] = new int[5];
+// 
+//         int i, j;
+// 
+//         //Сфабриковать данные об использовании ЦП
+//         for (i = 0; i < network_nodes.Length; i++)
+//             for (j = 0; j < network_nodes[i].Length; j++)
+//                 network_nodes[i][j] = i * j + 70;
+//         Console.WriteLine("Общее количество узлов сети: " + network_nodes.Length + "\n");
+// 
+//         for(i=0;i<network_nodes.Length;i++)
+//         {
+//             for(j=0; j<network_nodes[i].Length;j++)
+//             {
+//                 Console.Write("Использование в узле сети " + i + " ЦП " + j + ": ");
+//                 Console.Write(network_nodes[i][j] + "% ");
+//                 Console.WriteLine();
+//             }
+//             Console.WriteLine();
+//         }
+//         Console.ReadKey();
+//     }
+// }

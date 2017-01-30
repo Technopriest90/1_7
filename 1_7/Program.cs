@@ -423,3 +423,160 @@
 //         Console.ReadKey();
 //     }
 // }
+
+// using System.Globalization;
+// class StrOps
+// {
+//     static void Main()
+//     {
+//         string str1 = "Программировать в .NET лучше всего на C#.";
+//         string str2 = "Программировать в .NET лучше всего на C#.";
+//         string str3 = "Строки в C# весьма эффектины.";
+//         string strUp, strLow;
+//         int result, idx;
+// 
+//         Console.WriteLine("str1: " + str1);
+//         Console.WriteLine("Длина строки str1: " + str1.Length);
+// 
+//         // Создать варианты строки str1, набранные прописными и строчными буквами
+//         strLow = str1.ToLower(CultureInfo.CurrentCulture);
+//         strUp = str1.ToUpper(CultureInfo.CurrentCulture);
+//         Console.WriteLine("Вариант строки str1, " + "набранный строчными буквами\n   " + strLow);
+//         Console.WriteLine("Вариант строки str1, " + "набранный прописными буквами\n   " + strUp);
+// 
+//         Console.WriteLine();
+// 
+//         //Вывести строку str1 посимвольно.
+//         Console.WriteLine("Вывод строки str1 посимвольно.");
+//         for (int i = 0; i < str1.Length; i++)
+//             Console.Write(str1[i]);
+//         Console.WriteLine("\n");
+//         //Сравнить строки способом порядкового сравнения.
+//         if (str1 == str2)
+//             Console.WriteLine("str1 == str2");
+//         else
+//             Console.WriteLine("str1 != str2");
+//         if (str1 == str3)
+//             Console.WriteLine("str1 == str3");
+//         else
+//             Console.WriteLine("str1 != str3");
+//         // Сравнить строки с учетом культурной среды
+//         result = string.Compare(str3, str1, StringComparison.CurrentCulture);
+//         if (result == 0)
+//             Console.WriteLine("Строки str1 и str3 равны");
+//         else if (result < 0)
+//             Console.WriteLine("Строка str1 меньше строки str3");
+//         else
+//             Console.WriteLine("Строка str1 больше строки str3");
+// 
+//         Console.WriteLine();
+// 
+//         //Присвоить новую строку переменной str2.
+//         str2 = "Один Два Три Один";
+//         //Поиск подстроки
+//         idx = str2.IndexOf("Один", StringComparison.Ordinal);
+//         Console.WriteLine("Индекс первого вхождения подстроки <Один>: " + idx);
+//         idx = str2.LastIndexOf("Один", StringComparison.Ordinal);
+//         Console.WriteLine("Индекс последнего вхождения подстроки <Один>: " + idx);
+//         Console.ReadKey();
+//     }
+// }
+
+// class StringArrays // Продемонстрировать массивы строк
+// {
+//     static void Main()
+//     {
+//         string[] str = { "Это", "очень", "простой", "тест." };
+// 
+//         Console.WriteLine("Исходный массив: ");
+//         for (int i = 0; i < str.Length; i++)
+//             Console.Write(str[i] + " ");
+//         Console.WriteLine("\n");
+// 
+//         //Изменить строку.
+//         str[1] = "тоже";
+//         str[3] = "до предела тест!";
+// 
+//         Console.WriteLine("Видоизмененный массив: ");
+//         for (int i = 0; i < str.Length; i++)
+//             Console.Write(str[i] + " ");
+//         Console.ReadKey();
+//     }
+// }
+// class ConvertDigitsToWords
+// {
+//     static void Main() //вывести отдельные цифры целого числа словами
+//     {
+//         int num;
+//         int nextdigit;
+//         int numdigits;
+//         int[] n = new int[20];
+// 
+//         string[] digits = { "нуль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять" };
+// 
+//         num = 1908;
+// 
+//         Console.WriteLine("Число: " + num);
+// 
+//         Console.Write("Число словами: ");
+// 
+//         nextdigit = 0;
+//         numdigits = 0;
+// 
+//         // Получить отдельные цифры и сохранить их в массиве n.
+//         // Эти цифры сохраняются в обратном порядке.
+//         do
+//         {
+//             nextdigit = num % 10;
+//             n[numdigits] = nextdigit;
+//             numdigits++;
+//             num = num / 10;
+//         } while (num > 0);
+//         numdigits--;
+//         //вывести полученные слова.
+//         for (; numdigits >= 0; numdigits--)
+//             Console.Write(digits[n[numdigits]] + " ");
+// 
+//         Console.WriteLine();
+//         Console.ReadKey();
+// 
+//     }
+// }
+//class SubStr // Применить метод Substring()
+//{
+//    static void Main()
+//    {
+//        string orgstr = "В C# упрощается обращение со строками.";
+//
+//        //сформировать подстроку
+//        string substr = orgstr.Substring(5, 20);
+//        Console.WriteLine("orgstr: " + orgstr);
+//        Console.WriteLine("substr: " + substr);
+//        Console.ReadKey();
+//    }
+//}
+
+//     class StringSwitch //Продемонстрировать управление оператором switch посредством строк. 
+// { static void Main()
+//     {
+//         string[] strs = { "один", "два", "три", "два", "один" };
+// 
+//         foreach(string s in strs) {
+//             switch(s)
+//             {
+//                 case "один":
+//                     Console.Write(1);
+//                     break;
+//                 case "два":
+//                     Console.Write(2);
+//                     break;
+//                 case "три":
+//                     Console.Write(3);
+//                     break;
+//             }
+//         }
+//         Console.WriteLine();
+//         Console.ReadKey();
+//     }
+// 
+// }

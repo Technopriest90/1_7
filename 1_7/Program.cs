@@ -284,3 +284,129 @@
 //         Console.ReadKey();
 //     }
 // }
+
+
+// class Jagged // Продемонстрировать неявно типизированный ступенчатый массив
+// {
+//     static void Main()
+//     {
+//         var jagged = new[]
+//         {
+//             new[] {1,2,3,4},
+//             new[] {9,8,7},
+//             new[] {11,12,13,14,15}
+//         };
+// 
+//         for(int j =0;j<jagged.Length;j++)
+//         {
+//             for (int i = 0; i < jagged[j].Length; i++)
+//                 Console.Write(jagged[j][i] + " ");
+//             Console.WriteLine();
+//         }
+//         Console.ReadKey();
+// 
+// 
+//     }
+// }
+
+// class ForeachDemo   //Использовать оператор цикла foreach
+// {
+//     static void Main()
+//     {
+//         int sum = 0;
+//         int[] nums = new int[10];
+// 
+//         //Задать первоначальные значения элементов массива nums.
+//         for (int i = 0; i < 10; i++)
+//             nums[i] = i;
+//         //Использовать цикл foreach для вывода значений элементов массива и подсчета их суммы
+//         foreach (int x in nums)
+//         {
+//             Console.WriteLine("Значение элемента равно: " + x);
+//             sum += x;
+//         }
+// 
+//         Console.WriteLine("Сумма равна: " + sum);
+//         Console.ReadKey();
+//     }
+// 
+// }
+
+// class ForeachDemo   //использовать оператор break для преждевременного завершения цикла foreach
+// {
+//     static void Main()
+//     {
+//         int sum = 0;
+//         int[] nums = new int[10];
+// 
+//         //Задать первоначальные значения элементов массива nums
+//         for (int i = 0; i < 10; i++)
+//             nums[i] = i;
+// 
+//         //Использовать цикл foreach для вывода значений элементов массива и подсчета их суммы
+//         foreach(int x in nums)
+//         {
+//             Console.WriteLine("Значение элемента равно: " + x);
+//             sum += x;
+//             if (x == 4) break; //прервать цикл, как только индекс массива достигнет 4
+//         }
+//         Console.WriteLine("Сумма первых 5 элементов: " + sum);
+//         Console.ReadKey();
+//     }
+// 
+// }
+
+// class ForeachDemo2 // Использовать оператор цикла foreach для обращения к двумерному массиву
+// {
+//     static void Main()
+//     {
+//         int sum = 0;
+//         int[,] nums = new int[3, 5];
+// 
+//         //Задать  первоначальные значения элементов массива nums
+//         for (int i = 0; i < 3; i++)
+//             for (int j = 0; j < 5; j++)
+//                 nums[i, j] = (i + 1) * (j + 1);
+// 
+//         //Использовать цикл foreach для вывода значений элементов массива и подсчета их суммы
+//         foreach(int x in nums)
+//         {
+//             Console.WriteLine("Значени элементов равно: " + x);
+//             sum += x;
+//         }
+//         Console.WriteLine("Сумма равна: " + sum);
+//         Console.ReadKey();
+//     }
+// }
+
+//     class Search    //Поиск в массиве с помощью оператора цикла foreach
+// {
+//     static void Main()
+//     {
+//         int[] nums = new int[10];
+//         int val;
+//         bool found = false;
+// 
+//         //Задать первоначальные значения элементов массива nums.
+//         for (int i = 0; i < 10; i++)
+//             nums[i] = i;
+// 
+//         val = 5;
+// 
+//         //Использовать цикл foreach для поиска заданного значения в массиве nums.
+//         foreach(int x in nums)
+//         {
+//             if(x==val)
+//             {
+//                 found = true;
+//                 break;
+//             }
+//         }
+// 
+//         if (found)
+//             Console.WriteLine("Значение найдено!");
+//         Console.ReadKey();
+//     }
+// 
+// }
+

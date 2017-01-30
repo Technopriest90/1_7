@@ -410,3 +410,16 @@
 // 
 // }
 
+// class StringDemo // Создать и ввести символьную строку
+// {
+//     static void Main()
+//     {
+//         char[] charray = { 'Э', 'т', 'о', ' ', 'с', 'т', 'р', 'о', 'к', 'а', '.' };
+//         string str1 = new string(charray);
+//         string str2 = "Ещё одна строка.";
+// 
+//         Console.WriteLine(str1);
+//         Console.WriteLine(str2);
+//         Console.ReadKey();
+//     }
+// }
